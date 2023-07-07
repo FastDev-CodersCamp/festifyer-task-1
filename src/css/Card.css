@@ -1,0 +1,22 @@
+.card-comp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 25%;
+}
+
+.card-comp>i{
+    font-size: 2.4rem;
+}
+
+.card-comp>h2{
+    color: #1E266D;
+    margin: 2rem 0 .8rem;
+}
+
+.card-comp>p{
+    text-align: center;
+    color: #515867;
+    font-size: 1rem;
+    margin: 0;
+}
