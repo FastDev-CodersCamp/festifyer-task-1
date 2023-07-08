@@ -6,6 +6,9 @@ function App() {
   return (
     <div className="app">
 
+    {/* Fabiha's Task */}
+
+    {/* Shahzeb's Task */}
 
     {/* Sohaib's Task */}
       <div className="benefits">
