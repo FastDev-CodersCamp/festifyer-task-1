@@ -20,17 +20,18 @@ function App() {
     { src: 'https://www.festifyer.com/modules/themes/default/images/customer-logo-6.png', alt: 'Image 1' },
     
   ];
+
+  
   return (
     <div className="app">
-
-    {/* Fabiha's Task */}
       <Main />
-
-    {/* Shahzeb's Task */}
-    <ImageSlider images={images} />
-    {/* Sohaib's Task */}
-      <CardSec />
       
+      <div className="carousal">
+        <h2>Trusted and used by more than <span>13+</span> customers</h2>
+        <ImageSlider images={images} />
+      </div>
+      
+      <CardSec />
     </div>
   );
 }
