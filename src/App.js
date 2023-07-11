@@ -3,6 +3,8 @@ import 'https://kit.fontawesome.com/9c1c3f6a2e.js'
 import ImageSlider from './ImageSlider';
 import Main from './Main';
 import CardSec from './CardSec';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function App() {
   const images = [
@@ -24,14 +26,14 @@ function App() {
   
   return (
     <div className="app">
+      <Navbar />
       <Main />
-      
       <div className="carousal">
         <h2>Trusted and used by more than <span>13+</span> customers</h2>
         <ImageSlider images={images} />
-      </div>
-      
+      </div>      
       <CardSec />
+      <Footer />
     </div>
   );
 }
