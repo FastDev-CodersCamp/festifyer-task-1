@@ -32,3 +32,19 @@
     padding: 0 0 1.5rem;
     /* border: 1px solid red; */
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .App {
+      font-size: 1rem;
+    }
+    
+    .App-logo {
+      height: 25vmin;
+    }
+    
+    .App-header {
+      min-height: 80vh;
+      font-size: calc(1rem + 1vmin);
+    }
+  }
