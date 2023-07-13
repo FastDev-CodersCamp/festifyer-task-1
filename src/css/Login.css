@@ -1,0 +1,132 @@
+.login{
+    height: 100vh;
+}
+
+.login-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-header{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F6FF;
+    color: #1E266D;
+
+}
+
+.login-body{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.login-form{
+    max-width: 80%;
+    min-width: 50%;
+    /* height: 80%; */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+    border-radius: 1rem;
+
+}
+
+.login-form>p{
+    margin: 0 0 1rem;
+}
+
+.login-form>p>a{
+    text-decoration: none;
+}
+
+.input-field{
+    height: 3.5rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border: 1px solid #cbcbd1;
+    outline: none;
+    color: #515867;
+}
+
+.login-form>a{
+    margin: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-form>a:hover{
+    color: #FF6C02;
+    text-decoration: underline;
+}
+
+.login-form>div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.login-form>div>label{
+    display: flex;
+    overflow: hidden;
+}
+
+.login-form>div>label>span{
+    margin-right: .4rem;
+
+}
+
+.login-form>div>label>input{
+    position: relative;
+    top: .1rem;
+}
+
+.login-form>div>a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-form>div>a:hover{
+    color: #FF6C02;
+    text-decoration: underline;
+}
+
+.login-form>button{
+    width: 100%;
+    height: 3.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    border-radius: .3rem;
+
+    color: white;
+    background-color: #FF6C02;
+    border: 1px solid #FF6C02;
+
+    transition: background-color .2s;
+}
+
+.login-form>button:hover{
+    color: #FF6C02;
+    background-color: #F9F9F9;
+    cursor: pointer;
+}
+
+@media only screen and (min-width:1300px){
+    .login-form{
+        max-width: 60%;
+        min-width: 35%;
+    }
+}

@@ -5,6 +5,7 @@ import Main from './Main';
 import CardSec from './CardSec';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Login from './Login';
 
 function App() {
   const images = [
@@ -26,14 +27,25 @@ function App() {
   
   return (
     <div className="app">
-      <Navbar />
+      {/* <Navbar />
       <Main />
       <div className="carousal">
         <h2>Trusted and used by more than <span>13+</span> customers</h2>
         <ImageSlider images={images} />
       </div>      
       <CardSec />
-      <Footer />
+      <Footer /> */}
+
+      <Login 
+        formType={'login'}
+        title={'Log In'}
+        btnText={'Log In'}
+      />
+      <Login 
+        formType={'forgetPassword'}
+        title={'Reset Password'}
+        btnText={'Send me password reset link'}
+      />
     </div>
   );
 }
