@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./css/Navbar.css"
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
 
@@ -13,12 +14,14 @@ class Navbar extends Component {
     return (
       <>
         <nav>
-        <img src="https://www.festifyer.com/storage/system/6fYpjT6r6ugsHt5aYXOm59JeRHk7OslnDU3yktbl.png" alt="alternative" className='logo'/>
+        <Link to={'/'}>
+          <img src="https://www.festifyer.com/storage/system/6fYpjT6r6ugsHt5aYXOm59JeRHk7OslnDU3yktbl.png" alt="alternative" className='logo'/>
+        </Link>
           <div>
             <ul id='navbar' className={this.state.clicked  ? "#navbar active" : "#navbar"}>
-              <li ><a href="/">Blogs</a></li>
-              <li ><a href="/">Contact</a></li>
-              <li><a href="/"><button id='btn'>Login</button></a></li>
+              <li ><Link to={'/blogs'}>Blogs</Link></li>
+              <li ><Link to={'/contacts'}>Contact</Link></li>
+              <li className='btn-login'><Link to={'/login'}>Login</Link></li>
               
             </ul>
           </div>
@@ -34,43 +37,3 @@ class Navbar extends Component {
 }
 
 export default Navbar
-
-
-
-// import React from 'react';
-// import "../styles/Navbar.css";
-// import Tool from "./components";
-// import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-
-// const CustomNavbar = () => {
-//   return (
-//     <Navbar expand="lg">
-//       <Container>
-//         <Navbar.Brand href="/">
-//           <img src="https://www.festifyer.com/storage/system/6fYpjT6r6ugsHt5aYXOm59JeRHk7OslnDU3yktbl.png" alt="alternative" />
-//         </Navbar.Brand>
-
-//         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
-//         <Navbar.Collapse id="responsive-navbar-nav">
-//           <Nav className="ms-auto">
-//             <Nav.Link href="/"className = "nav-link ms-auto">
-//               <Tool blogs="Blogs" />
-//             </Nav.Link>
-//             <Nav.Link href="/" className = "nav-link ms-left">
-//               <Tool contacts="Contact" />
-//             </Nav.Link>
-//           </Nav>
-//           <Nav>
-//             <Button variant="primary" className = "ms-auto transparent-button">
-//               <Tool login="Abdullah" />
-
-//             </Button>
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// }
-
-// export default CustomNavbar;

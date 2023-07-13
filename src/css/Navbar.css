@@ -65,7 +65,7 @@ nav {
   color: #ffce31;
 }
 
-#btn {
+.btn-login>a {
   width: 100px;
   height: 35px;
   border-radius: 5px;
@@ -76,11 +76,15 @@ nav {
   font-weight: bold;
   transition: 0.2s ease;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#btn:hover {
+.btn-login>a:hover {
   background-color: #1e266d;
-  color: #fff;
+  color: white !important;
 }
 
 

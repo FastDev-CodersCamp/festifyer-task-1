@@ -6,6 +6,14 @@ import CardSec from './CardSec';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Login from './Login';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import NotFound from './NotFound';
+
 
 function App() {
   const images = [
@@ -27,25 +35,42 @@ function App() {
   
   return (
     <div className="app">
-      {/* <Navbar />
-      <Main />
-      <div className="carousal">
-        <h2>Trusted and used by more than <span>13+</span> customers</h2>
-        <ImageSlider images={images} />
-      </div>      
-      <CardSec />
-      <Footer /> */}
+      <Router>
+        <Navbar />
+        <Routes>
 
-      <Login 
-        formType={'login'}
-        title={'Log In'}
-        btnText={'Log In'}
-      />
-      <Login 
-        formType={'forgetPassword'}
-        title={'Reset Password'}
-        btnText={'Send me password reset link'}
-      />
+          <Route path='/' element={<>
+            <Main />
+            <div className="carousal">
+              <h2>Trusted and used by more than <span>13+</span> customers</h2>
+              <ImageSlider images={images} />
+            </div>      
+            <CardSec />
+          </>} />
+
+          <Route path='/login' element={
+            <Login 
+              formType={'login'}
+              title={'Log In'}
+              btnText={'Log In'}
+            />
+          } />
+
+          <Route path='/reset-password' element={
+            <Login 
+                formType={'forgetPassword'}
+                title={'Reset Password'}
+                btnText={'Send me password reset link'}
+              />
+          } />
+
+          <Route path="/*" element={<NotFound/>}/>
+
+        </Routes>
+        <Footer />
+      </Router>
+        
+      
     </div>
   );
 }

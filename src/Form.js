@@ -1,12 +1,13 @@
 import React from 'react'
 import InputField from './InputField'
+import { Link } from "react-router-dom";
 
 function Form({formType,btnText}) {
   return (
     <form action="" className="login-form">
         {
             formType=='login'? 
-            <p>You don't have a password? Then please <a href="">Sign Up</a></p>
+            <p>You don't have a password? Then please <Link to={'/sign-up'}>Sign Up</Link></p>
             :
             <p>Enter your email address and your password will be reset and email to you.</p>
         }
@@ -22,10 +23,10 @@ function Form({formType,btnText}) {
                     <span>Remember me</span>
                     <input type="checkbox" name="" id="" />
                 </label>                
-                <a href="">I forgot password</a>
+                <Link to={'/reset-password'}>I forgot password</Link>
             </div>
             :
-            <a href=''>Already have account?</a>
+            <Link to={'/login'}>Already have account?</Link>
         }
         {
             formType=='login'? 
